@@ -1,6 +1,5 @@
-package com.breens.todochamp.feature_tasks.ui.components
+package com.breens.todochamp.ui.components
 
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -30,8 +29,6 @@ fun TaskCardComponent(
     updateTask: (Task) -> Unit,
     task: Task,
 ) {
-
-    Log.d("TASK: ", "$task")
     Card(
         modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
         shape = RoundedCornerShape(8.dp),

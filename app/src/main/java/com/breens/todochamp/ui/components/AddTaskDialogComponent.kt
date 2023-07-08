@@ -1,4 +1,4 @@
-package com.breens.todochamp.feature_tasks.ui.components
+package com.breens.todochamp.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -23,7 +23,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
-import com.breens.todochamp.feature_tasks.state.TasksScreenUiState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -32,7 +31,6 @@ fun AddTaskDialogComponent(
     setTaskBody: (String) -> Unit,
     saveTask: () -> Unit,
     closeDialog: () -> Unit,
-    uiState: TasksScreenUiState,
 ) {
     Dialog(onDismissRequest = { closeDialog() }) {
         Surface(
@@ -58,7 +56,7 @@ fun AddTaskDialogComponent(
                     Spacer(modifier = Modifier.height(16.dp))
 
                     OutlinedTextField(
-                        value = uiState.currentTextFieldTitle,
+                        value = "",
                         onValueChange = { title ->
                             setTaskTitle(title)
                         },
@@ -77,7 +75,7 @@ fun AddTaskDialogComponent(
                     Spacer(modifier = Modifier.height(12.dp))
 
                     OutlinedTextField(
-                        value = uiState.currentTextFieldBody,
+                        value = "",
                         onValueChange = { body ->
                             setTaskBody(body)
                         },

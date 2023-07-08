@@ -1,4 +1,4 @@
-package com.breens.todochamp.ui
+package com.breens.todochamp.feature_tasks.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

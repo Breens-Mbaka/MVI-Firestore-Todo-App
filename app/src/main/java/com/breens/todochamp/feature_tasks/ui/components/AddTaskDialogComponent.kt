@@ -1,4 +1,4 @@
-package com.breens.todochamp.ui.components
+package com.breens.todochamp.feature_tasks.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -23,16 +23,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
-import com.breens.todochamp.data.model.Task
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun UpdateTaskDialogComponent(
+fun AddTaskDialogComponent(
     setTaskTitle: (String) -> Unit,
     setTaskBody: (String) -> Unit,
     saveTask: () -> Unit,
     closeDialog: () -> Unit,
-    task: Task?,
 ) {
     Dialog(onDismissRequest = { closeDialog() }) {
         Surface(
@@ -47,7 +45,7 @@ fun UpdateTaskDialogComponent(
                         horizontalArrangement = Arrangement.Center,
                     ) {
                         Text(
-                            text = "Update Task",
+                            text = "New Task",
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Bold,
                         )
@@ -63,7 +61,6 @@ fun UpdateTaskDialogComponent(
                             setTaskTitle(title)
                         },
                         label = { Text("Task Title") },
-                        placeholder = { Text(task?.title.toString() ?: "") },
                         colors = TextFieldDefaults.outlinedTextFieldColors(
                             focusedBorderColor = Color.Black,
                             unfocusedBorderColor = Color.Black,
@@ -83,7 +80,6 @@ fun UpdateTaskDialogComponent(
                             setTaskBody(body)
                         },
                         label = { Text("Task Body") },
-                        placeholder = { Text(task?.body ?: "") },
                         colors = TextFieldDefaults.outlinedTextFieldColors(
                             focusedBorderColor = Color.Black,
                             unfocusedBorderColor = Color.Black,
@@ -114,7 +110,7 @@ fun UpdateTaskDialogComponent(
                                 contentColor = Color.White,
                             ),
                         ) {
-                            Text(text = "Update Task")
+                            Text(text = "Save Task")
                         }
                     }
                 }

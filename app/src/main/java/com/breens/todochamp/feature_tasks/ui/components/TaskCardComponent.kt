@@ -1,4 +1,4 @@
-package com.breens.todochamp.ui.components
+package com.breens.todochamp.feature_tasks.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

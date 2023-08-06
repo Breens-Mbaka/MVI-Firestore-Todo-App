@@ -1,4 +1,4 @@
-package com.breens.todochamp.feature_tasks.viewmodel
+package com.breens.todochamp.feature_tasks.viewmodel // ktlint-disable package-name
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

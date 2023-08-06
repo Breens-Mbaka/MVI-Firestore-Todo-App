@@ -1,8 +1,7 @@
-<h2 align="center">TodoChamp</h2></br>
+<h2 align="center">Todo App</h2></br>
 
-<p align="center">
-:bee:  An todo app that stores its data in Cloud FireStore and uses the MVI design pattern. This was used as an example project in this [video course](https://www.youtube.com/playlist?list=PLA7YMGupLhlGdLMlZQUuplhUfnTQUWxTc)
-</p><br>
+# Todo App MVI + Cloud FireStore 🔥
+An todo app that stores its data in Cloud FireStore and uses the MVI design pattern. This was used as an example project in this [video course](https://www.youtube.com/playlist?list=PLA7YMGupLhlGdLMlZQUuplhUfnTQUWxTc)
 
 # NOTE 🚨
 ``
